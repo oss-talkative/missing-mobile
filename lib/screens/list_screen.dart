@@ -15,6 +15,7 @@ class ListScreen extends StatefulWidget {
 
 class _ListScreenState extends State<ListScreen> {
   late Future<List<Child>> children;
+  String filterText = "";
 
   @override
   void initState() {
@@ -59,9 +60,13 @@ class _ListScreenState extends State<ListScreen> {
                       color: kLightGrey,
                       borderRadius: BorderRadius.circular(12)),
                   child: TextField(
+                    onSubmitted: (value) {
+                      setState(() {
+                        filterText = value;
+                      });
+                    },
                     cursorColor: kThemeColor,
                     keyboardType: TextInputType.text,
-                    onChanged: (string) {},
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.search),
                       fillColor: kLightGrey,
@@ -88,8 +93,11 @@ class _ListScreenState extends State<ListScreen> {
                               child: Column(
                             children: List.generate(
                                 snapshot.data!.length,
-                                (index) =>
-                                    ListItem(child: snapshot.data![index])),
+                                (index) => (filterText == "" ||
+                                        snapshot.data![index].name
+                                            .contains(filterText))
+                                    ? ListItem(child: snapshot.data![index])
+                                    : Container()),
                           ));
                         } else if (snapshot.hasError) {
                           return Center(child: Text("데이터를 불러올 수 없습니다"));
