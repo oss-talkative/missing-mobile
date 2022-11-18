@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:talkative_missing/model/child.dart';
+import 'package:talkative_missing/screens/detail_screen.dart';
 
 class ListItem extends StatelessWidget {
   const ListItem({Key? key, required this.child}) : super(key: key);
@@ -12,7 +13,12 @@ class ListItem extends StatelessWidget {
     return Container(
       width: size.width,
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: ((context) => DetailScreen(child: child))));
+        },
         child: Padding(
           padding: const EdgeInsets.all(18),
           child: Row(
