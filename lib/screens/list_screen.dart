@@ -27,14 +27,10 @@ class _ListScreenState extends State<ListScreen> {
     final response = await dio.post(
         "https://www.safe182.go.kr/api/lcm/findChildList.do?esntlId=10000401&authKey=c8ebebd818f94fe6&rowSize=50");
 
-    try {
-      final ChildrenResponse children =
-          ChildrenResponse.fromJson(json.decode(response.data));
-      return children.data;
-    } catch (e) {
-      print(e);
-      return [];
-    }
+    final ChildrenResponse children =
+        ChildrenResponse.fromJson(json.decode(response.data));
+
+    return children.data;
   }
 
   @override
