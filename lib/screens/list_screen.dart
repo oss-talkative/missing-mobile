@@ -6,6 +6,8 @@ import 'package:talkative_missing/model/children_response.dart';
 import 'package:talkative_missing/screens/list_item.dart';
 import 'dart:convert';
 
+import 'package:talkative_missing/screens/submit_screen.dart';
+
 class ListScreen extends StatefulWidget {
   const ListScreen({Key? key}) : super(key: key);
 
@@ -111,7 +113,10 @@ class _ListScreenState extends State<ListScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => SubmitScreen()));
+        },
         child: Image.asset(
           'assets/images/pin.png',
           width: 24,
