@@ -86,7 +86,7 @@ class DetailScreen extends StatelessWidget {
                                                     color: Colors.white),
                                               ),
                                               SizedBox(
-                                                width: 24,
+                                                width: 18,
                                               )
                                             ],
                                           ),
@@ -126,7 +126,7 @@ class DetailScreen extends StatelessWidget {
                                                     color: Colors.grey),
                                               ),
                                               SizedBox(
-                                                width: 24,
+                                                width: 18,
                                               )
                                             ],
                                           ),

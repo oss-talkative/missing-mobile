@@ -70,7 +70,7 @@ class _ReportScreenState extends State<ReportScreen> {
                                                   color: Colors.white),
                                             ),
                                             SizedBox(
-                                              width: 24,
+                                              width: 18,
                                             )
                                           ],
                                         ),
@@ -110,7 +110,7 @@ class _ReportScreenState extends State<ReportScreen> {
                                                   color: Colors.grey),
                                             ),
                                             SizedBox(
-                                              width: 24,
+                                              width: 18,
                                             )
                                           ],
                                         ),
@@ -188,7 +188,7 @@ class _ReportScreenState extends State<ReportScreen> {
                                                       color: Colors.white),
                                                 ),
                                                 SizedBox(
-                                                  width: 24,
+                                                  width: 18,
                                                 )
                                               ],
                                             ),
@@ -230,7 +230,7 @@ class _ReportScreenState extends State<ReportScreen> {
                                                       color: Colors.grey),
                                                 ),
                                                 SizedBox(
-                                                  width: 24,
+                                                  width: 18,
                                                 )
                                               ],
                                             ),
