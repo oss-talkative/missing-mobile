@@ -25,7 +25,121 @@ class DetailScreen extends StatelessWidget {
               Navigator.pop(context);
             },
             icon: Icon(Icons.arrow_back_ios, color: Colors.grey)),
-        actions: [TextButton(onPressed: () {}, child: Text("제보"))],
+        actions: [
+          TextButton(
+              onPressed: () {
+                showModalBottomSheet(
+                    context: context,
+                    builder: ((context) => Container(
+                          height: 235,
+                          decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(32),
+                                topRight: Radius.circular(32),
+                              )),
+                          child: Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  "이 아동을 발견하셨나요?",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 24,
+                                ),
+                                SizedBox(
+                                  width: size.width - 64,
+                                  child: ElevatedButton(
+                                      onPressed: () {},
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(16),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Icon(
+                                              Icons.fmd_bad,
+                                              color: Colors.white,
+                                            ),
+                                            Text(
+                                              "네, 발견했어요.",
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white),
+                                            ),
+                                            SizedBox(
+                                              width: 24,
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      style: ButtonStyle(
+                                          shape: MaterialStateProperty.all(
+                                        RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(64),
+                                        ),
+                                      ))),
+                                ),
+                                SizedBox(
+                                  height: 16,
+                                ),
+                                SizedBox(
+                                  width: size.width - 64,
+                                  child: OutlinedButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(16),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Icon(
+                                              Icons.undo,
+                                              color: Colors.grey,
+                                            ),
+                                            Text(
+                                              "잘못 눌렀어요.",
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.grey),
+                                            ),
+                                            SizedBox(
+                                              width: 24,
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      style: ButtonStyle(
+                                          side: MaterialStateProperty.all(
+                                              BorderSide(
+                                                  color: Colors.grey,
+                                                  width: 2)),
+                                          shape: MaterialStateProperty.all(
+                                            RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(64),
+                                                side: BorderSide(
+                                                    color: Colors.grey,
+                                                    width: 2)),
+                                          ))),
+                                )
+                              ],
+                            ),
+                          ),
+                        )));
+              },
+              child: Text("제보"))
+        ],
       ),
       body: SizedBox(
         width: size.width,
