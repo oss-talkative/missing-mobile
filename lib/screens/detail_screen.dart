@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:talkative_missing/constants.dart';
 import 'package:talkative_missing/model/child.dart';
+import 'package:talkative_missing/screens/report_screen.dart';
 
 class DetailScreen extends StatelessWidget {
   const DetailScreen({Key? key, required this.child}) : super(key: key);
@@ -46,7 +47,7 @@ class DetailScreen extends StatelessWidget {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Text(
-                                    "이 아동을 발견하셨나요?",
+                                    "이 사람을 발견하셨나요?",
                                     style: TextStyle(
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold),
@@ -57,7 +58,16 @@ class DetailScreen extends StatelessWidget {
                                   SizedBox(
                                     width: size.width - 64,
                                     child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      ReportScreen(
+                                                        child: child,
+                                                      )));
+                                        },
                                         child: Padding(
                                           padding: const EdgeInsets.all(16),
                                           child: Row(
