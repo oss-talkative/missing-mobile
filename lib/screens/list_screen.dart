@@ -26,8 +26,9 @@ class _ListScreenState extends State<ListScreen> {
   Future<List<Child>> fetchChildren() async {
     var dio = Dio();
     final response = await dio.post(
-        "https://www.safe182.go.kr/api/lcm/findChildList.do?esntlId=10000401&authKey=c8ebebd818f94fe6&rowSize=50");
+        "https://www.safe182.go.kr/api/lcm/findChildList.do?esntlId=10000401&authKey=c8ebebd818f94fe6&rowSize=10");
 
+    print(response.data);
     final ChildrenResponse children =
         ChildrenResponse.fromJson(json.decode(response.data));
 
@@ -39,6 +40,7 @@ class _ListScreenState extends State<ListScreen> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SizedBox(
           width: size.width,
