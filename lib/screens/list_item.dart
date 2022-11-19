@@ -35,23 +35,27 @@ class ListItem extends StatelessWidget {
                   SizedBox(
                     width: 16,
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        child.name,
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        "실종일 ${DateTime.parse(child.occurDate).toString().substring(0, 10)}",
-                        style: TextStyle(fontSize: 12, color: Colors.grey),
-                      ),
-                      Text(
-                        "실종장소 ${child.occurAddress}",
-                        style: TextStyle(fontSize: 12, color: Colors.grey),
-                      )
-                    ],
+                  SizedBox(
+                    width: size.width / 2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          child.name,
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "실종일 ${DateTime.parse(child.occurDate).toString().substring(0, 10)}",
+                          style: TextStyle(fontSize: 12, color: Colors.grey),
+                        ),
+                        Text(
+                          "실종장소 ${child.occurAddress}",
+                          style: TextStyle(fontSize: 12, color: Colors.grey),
+                          overflow: TextOverflow.ellipsis,
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
