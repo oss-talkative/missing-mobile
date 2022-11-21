@@ -13,6 +13,24 @@
 Interest in this problem decreases as time goes by, but information of missing children is still shared through outdated methods such as paper leaflets.
 
 We intended to solve this problem by providing information of missing children online, mobile application providing convenient user interface so that information of missing children can be easily and quickly checked.
+
+## 📑 About This Project
+ ### ⚙ How it Works?
+  asdfgsasdf
+  
+  
+## 📲 How to Install?
+  ### 📱 Mobile App
+  ### ☁️ Backend Server
+  ### 🌐 Frontend Web for Administrator
+  
+  
+## 🧩 How to Use?
+  ### 📱 Mobile App
+  ### ☁️ Backend Server
+  ### 🌐 Frontend Web for Administrator
+  
+  
  
  ## 🧑‍💻 Project Members
  
@@ -29,8 +47,5 @@ We intended to solve this problem by providing information of missing children o
   
   </div>
   
- ## ⚙ How it Works?
-  asdfgsasdf
-  
- ## 📃 License
+ ## 🧾 License
   This project is licensed under the terms of the MIT license.
