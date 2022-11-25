@@ -167,7 +167,71 @@ class _ReportScreenState extends State<ReportScreen> {
                                     SizedBox(
                                       width: size.width - 64,
                                       child: ElevatedButton(
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                            showDialog(
+                                                context: context,
+                                                builder: ((context) =>
+                                                    AlertDialog(
+                                                        title: Center(
+                                                          child: Text('제보 완료',
+                                                              style: TextStyle(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontSize: 18),
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center),
+                                                        ),
+                                                        content:
+                                                            IntrinsicHeight(
+                                                                child: Column(
+                                                                    children: [
+                                                              Text(
+                                                                  "제보가 성공적으로 접수되었습니다.")
+                                                            ])),
+                                                        actions: [
+                                                          ElevatedButton(
+                                                              onPressed: () {
+                                                                Navigator.pop(
+                                                                    context);
+                                                                Navigator.pop(
+                                                                    context);
+                                                                Navigator.pop(
+                                                                    context);
+                                                              },
+                                                              child: Text("완료",
+                                                                  style:
+                                                                      TextStyle(
+                                                                    color: Colors
+                                                                        .white,
+                                                                  )),
+                                                              style:
+                                                                  ButtonStyle(
+                                                                      shape: MaterialStateProperty
+                                                                          .all(
+                                                                RoundedRectangleBorder(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              64),
+                                                                ),
+                                                              )))
+                                                        ],
+                                                        actionsAlignment:
+                                                            MainAxisAlignment
+                                                                .center,
+                                                        contentPadding:
+                                                            const EdgeInsets
+                                                                    .fromLTRB(
+                                                                15, 15, 15, 5),
+                                                        shape: RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        24)))));
+                                          },
                                           child: Padding(
                                             padding: const EdgeInsets.all(16),
                                             child: Row(
