@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: _createMaterialColor(kThemeColor),
           canvasColor: Colors.transparent),
       home: const ListScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 
